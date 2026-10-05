@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions
+    xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+    xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+    xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+    xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+    id="Definitions_1"
+    targetNamespace="http://example.com/flowable">
+
+  <bpmn:process id="simpleProcess" isExecutable="true">
+    <bpmn:startEvent id="startEvent" name="Start"/>
+    <bpmn:userTask id="taskA" name="Task A"/>
+    <bpmn:userTask id="taskB" name="Task B"/>
+    <bpmn:endEvent id="endEvent" name="End"/>
+
+    <bpmn:sequenceFlow id="flow_start_A" sourceRef="startEvent" targetRef="taskA"/>
+    <bpmn:sequenceFlow id="flow_A_B" sourceRef="taskA" targetRef="taskB"/>
+    <bpmn:sequenceFlow id="flow_B_end" sourceRef="taskB" targetRef="endEvent"/>
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="simpleProcess">
+
+      <bpmndi:BPMNShape id="shape_startEvent" bpmnElement="startEvent">
+        <dc:Bounds x="100" y="100" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="shape_taskA" bpmnElement="taskA">
+        <dc:Bounds x="200" y="80" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="shape_taskB" bpmnElement="taskB">
+        <dc:Bounds x="350" y="80" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="shape_endEvent" bpmnElement="endEvent">
+        <dc:Bounds x="500" y="100" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="edge_flow_start_A" bpmnElement="flow_start_A">
+        <di:waypoint x="136" y="118"/>
+        <di:waypoint x="200" y="118"/>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="edge_flow_A_B" bpmnElement="flow_A_B">
+        <di:waypoint x="300" y="120"/>
+        <di:waypoint x="350" y="120"/>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNEdge id="edge_flow_B_end" bpmnElement="flow_B_end">
+        <di:waypoint x="450" y="120"/>
+        <di:waypoint x="500" y="118"/>
+      </bpmndi:BPMNEdge>
+
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

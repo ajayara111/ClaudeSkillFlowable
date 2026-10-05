@@ -1,0 +1,2 @@
+<!-- Example only; adapt namespaces/properties to the existing process. -->
+<bpmn:userTask id="userTask_example" name="Example User Task"/>

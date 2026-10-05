@@ -1,0 +1,7 @@
+# Placeholder expected output
+
+The final expected BPMN should contain:
+
+taskA -> approveAccount -> taskB
+
+and valid BPMN DI for the new task and sequence flows.

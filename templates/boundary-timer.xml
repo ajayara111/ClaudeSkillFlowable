@@ -1,0 +1,5 @@
+<bpmn:boundaryEvent id="boundaryTimer_example" attachedToRef="task_example">
+  <bpmn:timerEventDefinition>
+    <bpmn:timeDuration>PT1H</bpmn:timeDuration>
+  </bpmn:timerEventDefinition>
+</bpmn:boundaryEvent>

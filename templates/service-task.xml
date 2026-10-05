@@ -1,0 +1,2 @@
+<!-- Example only; adapt Flowable implementation to the project. -->
+<bpmn:serviceTask id="serviceTask_example" name="Example Service Task"/>

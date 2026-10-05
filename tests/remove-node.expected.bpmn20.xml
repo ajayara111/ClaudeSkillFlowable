@@ -1,0 +1,7 @@
+# Placeholder expected output
+
+The final expected BPMN should contain:
+
+taskA -> endEvent
+
+with no orphaned BPMNShape or BPMNEdge elements.
